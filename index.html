@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adventure Planner Alpha</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <h1>🌍 Adventure Planner Alpha</h1>
+      <p>Dream → Affordability → Route → Day Cards → Budget Decisions</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav-home active">Home</a>
+      <a href="builder.html" class="nav-builder">Builder</a>
+      <a href="overview.html" class="nav-overview">Overview</a>
+      <a href="daycard.html" class="nav-daycard">Day Card</a>
+      <a href="fund.html" class="nav-fund">Fund</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="card">
+  <h2>Adventure Fund Dashboard</h2>
+  <div class="kpis">
+    <div class="kpi"><span class="muted">Annual fund</span><b>£8,000</b></div>
+    <div class="kpi"><span class="muted">Allocated</span><b>£4,700</b></div>
+    <div class="kpi"><span class="muted">Available</span><b>£3,300</b></div>
+    <div class="kpi"><span class="muted">Active trip</span><b>Norway</b></div>
+  </div>
+</section>
+<section class="grid">
+  <div class="card">
+    <h2>What adventure do you want?</h2>
+    <textarea id="dreamText">I want to go on a motorcycle trip to the Alps, camping on a shoestring budget.</textarea>
+    <div class="btns"><a class="btn" href="builder.html">Build My Adventure</a><button class="secondary" onclick="saveDream()">Save Dream</button></div>
+    <p class="muted">Alpha version uses sample data. Later this box will connect to AI.</p>
+  </div>
+  <div class="card">
+    <h2>Active Adventure</h2>
+    <h3>🏍 Norway 2026</h3>
+    <p>Day 12 · Bodø → Saltstraumen → Innhavet</p>
+    <div class="status green">🟢 Budget on track</div>
+    <div class="btns"><a class="btn" href="daycard.html">Open Today’s Day Card</a></div>
+  </div>
+</section>
+<section class="card">
+  <h2>Adventure Library</h2>
+  <div class="grid-3">
+    <div class="option"><h3>🏍 Norway 2026</h3><p>Active · Budget £2,100</p><span class="tag">Motorcycle</span><span class="tag">Camping</span></div>
+    <div class="option"><h3>🚴 North Sea Cycle</h3><p>Saved · Budget £875</p><span class="tag">Cycling</span><span class="tag">Shoestring</span></div>
+    <div class="option"><h3>🌏 Australia Dream</h3><p>Wishlist · Not funded yet</p><span class="tag">Future</span><span class="tag">Big trip</span></div>
+  </div>
+</section>
+</main><footer class="footer">Adventure Planner Alpha v0.1</footer>
+<script src="js/app.js"></script></body></html>
