@@ -1,55 +1,36 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Adventure Overview</title><link rel="stylesheet" href="css/style.css"></head>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Overview</title><link rel="stylesheet" href="css/style.css"></head>
 <body>
-<header class="header">
+<header class="app-header">
   <div class="header-inner">
-    <div class="brand">
-      <h1>🌍 Adventure Planner Alpha</h1>
-      <p>Dream → Affordability → Route → Day Cards → Budget Decisions</p>
-    </div>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">🌍</span>
+      <span>
+        <strong>Adventure Planner</strong>
+        <small>Alpha v0.2</small>
+      </span>
+    </a>
     <nav class="nav">
       <a href="index.html" class="nav-home">Home</a>
-      <a href="builder.html" class="nav-builder">Builder</a>
+      <a href="daycard.html" class="nav-daycard">Today</a>
       <a href="overview.html" class="nav-overview active">Overview</a>
-      <a href="daycard.html" class="nav-daycard">Day Card</a>
+      <a href="builder.html" class="nav-builder">Builder</a>
       <a href="fund.html" class="nav-fund">Fund</a>
     </nav>
   </div>
 </header>
 
 <main>
-<section class="card">
-  <h2>French Alps Explorer</h2>
-  <div class="kpis">
-    <div class="kpi"><span class="muted">Duration</span><b>21 days</b></div>
-    <div class="kpi"><span class="muted">Distance</span><b>4,500 km</b></div>
-    <div class="kpi"><span class="muted">Budget</span><b>£1,650</b></div>
-    <div class="kpi"><span class="muted">Fund left</span><b>£1,650</b></div>
-  </div>
-</section>
-<section class="card">
-  <h2>Overview Route Map</h2>
-  <div class="mapbox">
-    <div class="mapline"></div>
-    <div class="stop" style="left:12%;top:15%">1</div><div class="stop-label" style="left:16%;top:14%">Scotland</div>
-    <div class="stop blue" style="left:28%;top:70%">⛴</div><div class="stop-label" style="left:32%;top:70%">Ferry to France</div>
-    <div class="stop" style="left:54%;top:48%">8</div><div class="stop-label" style="left:58%;top:48%">Galibier</div>
-    <div class="stop green" style="left:67%;top:60%">⭐</div><div class="stop-label" style="left:71%;top:60%">Iseran</div>
-    <div class="stop" style="left:76%;top:34%">14</div><div class="stop-label" style="left:80%;top:34%">Bonette</div>
-  </div>
-</section>
-<section class="grid">
-  <div class="card">
-    <h2>Top Highlights</h2>
-    <div class="option"><h3>Col du Galibier ★★★★★</h3><p>Iconic Alpine pass and major ride day.</p></div>
-    <div class="option"><h3>Col de l’Iseran ★★★★★</h3><p>High altitude mountain riding.</p></div>
-    <div class="option"><h3>Col de la Bonette ★★★★★</h3><p>One of the great Alps experiences.</p></div>
-  </div>
-  <div class="card">
-    <h2>Day Cards</h2>
-    <p>The overview map is only for the big picture. The daily cards are where decisions happen.</p>
-    <div class="btns"><a class="btn" href="daycard.html">Open Sample Day Card</a></div>
-  </div>
-</section>
+<section class="hero"><h1>Adventure Overview</h1><p>One map for the big picture. Day cards handle real decisions.</p></section>
+<section class="card"><h2>French Alps Explorer</h2>
+<div class="kpis"><div class="kpi"><span>Duration</span><b>21 days</b></div><div class="kpi"><span>Distance</span><b>4,500 km</b></div><div class="kpi"><span>Budget</span><b>£1,650</b></div><div class="kpi"><span>Fund left</span><b>£1,650</b></div></div></section>
+<section class="card"><h2>Overview Route Map</h2>
+<div class="mapbox"><div class="mapline"></div>
+<div class="stop" style="left:12%;top:15%">1</div><div class="stop-label" style="left:16%;top:14%">Scotland</div>
+<div class="stop blue" style="left:28%;top:70%">⛴</div><div class="stop-label" style="left:32%;top:70%">Ferry to France</div>
+<div class="stop" style="left:54%;top:48%">8</div><div class="stop-label" style="left:58%;top:48%">Galibier</div>
+<div class="stop green" style="left:67%;top:60%">⭐</div><div class="stop-label" style="left:71%;top:60%">Iseran</div>
+<div class="stop" style="left:76%;top:34%">14</div><div class="stop-label" style="left:80%;top:34%">Bonette</div>
+</div></section>
+<section class="grid"><div class="card"><h2>Major Highlights</h2><div class="option"><h3>Col du Galibier ★★★★★</h3><p>Iconic Alpine pass.</p></div><div class="option"><h3>Col de l’Iseran ★★★★★</h3><p>High-altitude mountain riding.</p></div><div class="option"><h3>Col de la Bonette ★★★★★</h3><p>One of the great Alps experiences.</p></div></div>
+<div class="card"><h2>Next Step</h2><p>Open the Day Card. This is the screen used while travelling.</p><a class="btn" href="daycard.html">Open Sample Day Card</a></div></section>
 </main><script src="js/app.js"></script></body></html>

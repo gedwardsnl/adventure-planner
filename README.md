@@ -1,26 +1,13 @@
-# Adventure Planner Alpha
+# Adventure Planner Alpha v0.2
 
 AI-powered adventure planning, budgeting and travel companion web app.
 
-## Version 0.1
+## v0.2 focus
 
-This alpha contains:
+- Mobile-first design
+- Day Card as the main travel screen
+- Stronger weather and budget decision panels
+- Norway-focused sample day
+- Adventure fund and affordability logic
 
-- Home dashboard
-- Adventure dream builder
-- Adventure overview
-- Interactive day card
-- Adventure fund page
-- Budget decision engine
-
-## Current status
-
-This is a static prototype designed for Netlify hosting.
-
-Future versions will add:
-
-- Live weather
-- Saved trips
-- AI adventure generation
-- Campsite, hotel and food data
-- Dynamic rerouting
+Static site for Netlify.

@@ -21,7 +21,7 @@ const sleepOptions = [
 const foodCategories = {
   Budget:[
     {name:"Supermarket picnic + campsite cook-up", cost:8, rating:"★★★★☆", text:"Best way to recover budget.", tags:["Cheapest","Self-cater"]},
-    {name:"Harbour fish snack", cost:14, rating:"★★★★☆", text:"Local and still fairly affordable.", tags:["Local","Quick"]}
+    {name:"Harbour fish snack", cost:14, rating:"★★★★☆", text:"Local and still affordable.", tags:["Local","Quick"]}
   ],
   Local:[
     {name:"Norwegian seafood cafe", cost:28, rating:"★★★★☆", text:"Best local experience if you are under budget.", tags:["Seafood","Local"]},
@@ -98,21 +98,30 @@ function updateBudget(){
   document.getElementById("budgetBar").style.width = percent + "%";
   const status = document.getElementById("budgetStatus");
   const advice = document.getElementById("budgetAdvice");
+  const panel = document.getElementById("budgetDecision");
+  const panelTitle = document.getElementById("budgetDecisionTitle");
+  const panelText = document.getElementById("budgetDecisionText");
   if(margin >= 50){
     status.className = "status green";
     status.textContent = `🟢 On track — forecast £${margin} under budget.`;
+    advice.className = "status green";
     advice.innerHTML = `<b>Decision:</b> This choice is affordable. You still have room for occasional cabins or restaurant meals.`;
+    if(panel){panel.className="decision-panel"; panelTitle.textContent=`🟢 £${margin} under budget`; panelText.textContent="This is a comfortable choice. The adventure fund remains healthy.";}
   } else if(margin >= 0){
     status.className = "status amber";
     status.textContent = `🟠 Tight but okay — forecast £${margin} under budget.`;
+    advice.className = "status amber";
     advice.innerHTML = `<b>Decision:</b> Allowed, but future spending becomes more rigid. Favour camping and budget food for the next few days.`;
+    if(panel){panel.className="decision-panel tight"; panelTitle.textContent=`🟠 Only £${margin} margin left`; panelText.textContent="You can choose this, but the next few days should be more disciplined.";}
   } else {
     const over = Math.abs(margin);
     status.className = "status red";
     status.textContent = `🔴 Over plan — forecast £${over} over budget.`;
     const campNights = Math.ceil(over / 40);
     const foodSave = Math.ceil(over / 9);
+    advice.className = "status red";
     advice.innerHTML = `<b>Recovery options:</b><br>• Camp ${campNights} future night(s) instead of cabins<br>• Reduce food spend by about £${foodSave}/day for the next 9 days<br>• Accept a revised trip budget of £${forecast}`;
+    if(panel){panel.className="decision-panel over"; panelTitle.textContent=`🔴 £${over} over plan`; panelText.textContent="The app will not stop the adventure. It flags the impact and suggests recovery choices.";}
   }
 }
 
